@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import Logo from "../../assets/logo.svg"
 import links from "../../constants/links/links.constant"
@@ -36,7 +36,9 @@ const Navbar = () => {
             return (
               <li key={index}>
                 {" "}
-                <Link to={item.path}>{item.text}</Link>
+                <AniLink paintDrip hex="#3fd0d4" to={item.path} duration={1}>
+                  {item.text}
+                </AniLink>
               </li>
             )
           })}

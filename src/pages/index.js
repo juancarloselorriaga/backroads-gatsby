@@ -1,25 +1,41 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import Layout from "../components/layout/layout.component"
-import SimpleHero from "../components/simple-hero/simple-hero.component"
+import StyledHero from "../components/styled-hero/styled-hero.component"
 import Banner from "../components/banner/banner.component.jsx"
 import About from "../components/about/about.component"
-import Services from '../components/services/services.component'
+import Services from "../components/services/services.component"
 
-export default () => (
+export default ({ data }) => (
   <Layout>
-    <SimpleHero>
+    <StyledHero home="true" img={data.defaultBcg.childImageSharp.fluid}>
       <Banner
         title="continue exploring"
         info="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id."
       >
-        <Link to="/tours" className="btn-white">
+        <AniLink paintDrip
+        hex="#3fd0d4"
+        to="/tours"
+        duration={1} className="btn-white">
           Explore tours
-        </Link>
+        </AniLink>
       </Banner>
-    </SimpleHero>
+    </StyledHero>
     <About />
     <Services />
   </Layout>
 )
+
+export const query = graphql`
+  {
+    defaultBcg: file(relativePath: { eq: "defaultBcg.jpeg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 4160) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`

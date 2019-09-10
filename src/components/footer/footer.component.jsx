@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import links from "../../constants/links/links.constant"
 import socialIcons from "../../constants/social-icons/social-icons.constant"
@@ -12,9 +12,15 @@ const Footer = () => {
       <div className={styles.links}>
         {links.map((item, index) => {
           return (
-            <Link key={index} to={item.path}>
+            <AniLink
+              key={index}
+              paintDrip
+              hex="#3fd0d4"
+              to={item.path}
+              duration={1}
+            >
               {item.text}
-            </Link>
+            </AniLink>
           )
         })}
       </div>
