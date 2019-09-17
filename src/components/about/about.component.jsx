@@ -31,7 +31,6 @@ const About = () => {
               fluid={aboutImage.childImageSharp.fluid}
               alt="awesome landscape"
               className={styles.aboutImg}
-              
             />
           </div>
         </article>
