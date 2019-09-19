@@ -7,7 +7,6 @@ import BlogCard from "../../components/Blog/blog-card/blog-card.component"
 import Title from "../../components/title/title.component"
 
 import styles from "../../components/Blog/blog.module.css"
-import { FaSortNumericUp } from "react-icons/fa"
 
 const BlogListTemplate = props => {
   const { currentPage, numPages } = props.pageContext
