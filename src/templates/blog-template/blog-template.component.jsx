@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import SEO from '../../components/SEO/SEO.component'
 
 import Layout from "../../components/layout/layout.component"
 
@@ -56,6 +57,7 @@ const BlogTemplate = ({ data }) => {
 
   return (
     <Layout>
+      <SEO title={title} />
       <section className={styles.blog}>
         <div className={styles.center}>
           {title && <h1>{title}</h1>}

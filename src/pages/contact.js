@@ -6,9 +6,12 @@ import Layout from "../components/layout/layout.component"
 import StyledHero from "../components/styled-hero/styled-hero.component"
 import Contact from '../components/contact/contact.component'
 
+import SEO from '../components/SEO/SEO.component'
+
 const ContactPage = ({data}) => {
   return (
     <Layout>
+      <SEO title="Contact" />
       <StyledHero img={data.contactBcg.childImageSharp.fluid} />
       <Contact />
     </Layout>

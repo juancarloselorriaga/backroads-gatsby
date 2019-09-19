@@ -12,7 +12,7 @@ import SEO from '../components/SEO/SEO.component'
 
 export default ({ data }) => (
   <Layout>
-    
+    <SEO title="Home"/>
     <StyledHero home="true" img={data.defaultBcg.childImageSharp.fluid}>
       <Banner
         title="continue exploring"
