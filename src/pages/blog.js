@@ -3,11 +3,13 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout/layout.component"
 import StyledHero from "../components/styled-hero/styled-hero.component"
+import BlogList from "../components/Blog/blog-list/blog-list.component"
 
-const Blog = ({data}) => {
+const Blog = ({ data }) => {
   return (
     <Layout>
-      <StyledHero img={data.blogBcg.childImageSharp.fluid}/>
+      <StyledHero img={data.blogBcg.childImageSharp.fluid} />
+      <BlogList />
     </Layout>
   )
 }
@@ -24,4 +26,4 @@ export const query = graphql`
   }
 `
 
-export default Blog;
+export default Blog

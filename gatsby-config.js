@@ -8,6 +8,9 @@ module.exports = {
     description:
       "Explore awesome wordlwide tours & discover what makes each of them unique. Forget your daily routine & say yes to adventure.",
     author: "@juancarloselorriaga",
+    twitterUsername: "@juancarlosverri",
+    image: '/defaultBcg.jpeg',
+    siteUrl: 'https://backroads-website.netlify.com',
   },
   plugins: [
     {
@@ -29,5 +32,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-transition-link`,
+    `gatsby-plugin-playground`,
+    `gatsby-plugin-react-helmet`
   ],
 }

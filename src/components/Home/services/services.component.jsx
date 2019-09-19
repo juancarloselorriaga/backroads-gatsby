@@ -1,9 +1,9 @@
 import React from "react"
 
-import Title from "../title/title.component"
-import services from "../../constants/services/services"
+import Title from "../../title/title.component"
+import services from "../../../constants/services/services"
 
-import styles from "../services/services.module.css"
+import styles from "./services.module.css"
 
 const Services = () => {
   return (
