@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: "BackRoads",
+    title: "Backroads",
     description:
       "Explore awesome wordlwide tours & discover what makes each of them unique. Forget your daily routine & say yes to adventure.",
     author: "@juancarloselorriaga",
