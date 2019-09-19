@@ -27,6 +27,8 @@ const SEO = ({ title, description }) => {
     twitterUsername,
   } = site.siteMetadata
 
+  console.log(`${siteUrl}${image}`)
+
   return (
     <Helmet htmlAttributes={{ lang: "en" }} title={`${title} | ${siteTitle}`}>
       <meta name="description" content={description || siteDesc } />
@@ -36,13 +38,13 @@ const SEO = ({ title, description }) => {
       | Facebook Cards
       |--------------------------------------------------
       */
-      <meta property="og:url" content={siteUrl} />
-      <meta property="og:type" content="website" />
-      <meta property="og:title" content={siteTitle} />
-      <meta property="og:description" content={siteDesc} />
-      <meta property="og:image" content={`${siteUrl}${image}`} />
-      <meta property="og:image:width" content="400"/>
-      <meta property="og:image:height" content="300" />
+     <meta property="og:url" content={siteUrl} />
+     <meta property="og:type" content="website" />
+     <meta property="og:title" content={siteTitle} />
+     <meta property="og:description" content={siteDesc} />
+     <meta property="og:image" content={`${siteUrl}${image}`} />
+     <meta property="og:image:width" content="400"/>
+     <meta property="og:image:height" content="300" />
       /**
       |--------------------------------------------------
       | Twitter Card
